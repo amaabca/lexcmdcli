@@ -1,0 +1,60 @@
+{
+  "name": "lexcmdcli",
+  "description": "CLI Tool for interacting with AWS Lex API",
+  "version": "0.0.0",
+  "author": "Zach Shaw @tehzwen",
+  "bin": {
+    "lexcmdcli": "./bin/run"
+  },
+  "bugs": "https://github.com/amaabca/lexcmdcli/issues",
+  "dependencies": {
+    "@aws-sdk/client-lex-models-v2": "^3.21.0",
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "prompt-sync": "^4.2.0",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/node": "^10",
+    "eslint": "^7.29.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "globby": "^10",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/amaabca/lexcmdcli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "lexcmdcli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "amaabca/lexcmdcli",
+  "scripts": {
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
