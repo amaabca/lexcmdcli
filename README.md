@@ -28,28 +28,64 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`lexcmdcli hello [FILE]`](#lexcmdcli-hello-file)
+* [`lexcmdcli list`](#lexcmdcli-list)
+* [`lexcmdcli build`](#lexcmdcli-build)
 * [`lexcmdcli help [COMMAND]`](#lexcmdcli-help-command)
 
-## `lexcmdcli hello [FILE]`
+## `lexcmdcli list`
 
-describe the command here
+Command for list all V2 Lex Bots
 
 ```
 USAGE
-  $ lexcmdcli hello [FILE]
+  $ lexcmdcli list
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help        show CLI help
+  -v, --verbose     includes more console messages
 
 EXAMPLE
-  $ lexcmdcli hello
-  hello world from ./src/hello.ts!
+  $ lexcmdcli list
+  12345: SAMPLE_BOT1
+          (STATUS: Available, CURRENT VERSION: DRAFT)
+
+  123456: SAMPLE_BOT2
+            (STATUS: Available, CURRENT VERSION: 10)
+
+  1234567: SAMPLE_BOT3
+            (STATUS: Available, CURRENT VERSION: 4)
+
+  12345678: SAMPLE_BOT4
+            (STATUS: Available, CURRENT VERSION: DRAFT)
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/amaabca/lexcmdcli/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/list.ts](https://github.com/amaabca/lexcmdcli/blob/v0.0.0/src/commands/list.ts)_
+
+## `lexcmdcli build`
+
+Command for deploying a V2 Lex Bot
+
+```
+USAGE
+  $ lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME> -l <LOCALE_ID> -v
+
+OPTIONS
+  -h, --help            show CLI help
+  -v, --verbose         includes more console messages
+  -a, --alias=alias     alias name to create/update
+  -b, --botId=botId     id of bot to be built
+  -l, --locale=locale   locale id for bot
+
+EXAMPLE
+  $ lexcmdcli build -b 12345 -a prod -l en_US
+  building bot locale.......done
+  building bot version...done
+  updating bot alias
+  done
+```
+
+_See code: [src/commands/build.ts](https://github.com/amaabca/lexcmdcli/blob/v0.0.0/src/commands/build.ts)_
+
 
 ## `lexcmdcli help [COMMAND]`
 
