@@ -184,7 +184,7 @@ export default class LexClient {
   }
 
   // helper method for updating bot alias with existing settings from other botAlias
-  updateBotAlias = async (botId: string, foundAlias: BotAliasSummary, botAlias: string, createVersionResults: CreateBotVersionCommandOutput) => {
+  updateBotAlias = async (botId: string, foundAlias: BotAliasSummary, botAlias: string, createVersionResults: CreateBotVersionCommandOutput): Promise<void> => {
     const describeBotAliasCommand = new DescribeBotAliasCommand({ botId, botAliasId: foundAlias.botAliasId });
     const describeBotAliasResults = await this.client.send(describeBotAliasCommand);
 
@@ -199,7 +199,7 @@ export default class LexClient {
       botAliasName: botAlias,
       botVersion: createVersionResults.botVersion,
       botAliasLocaleSettings: describeBotAliasResults.botAliasLocaleSettings,
-      sentimentAnalysisSettings: describeBotAliasResults.sentimentAnalysisSettings
+      sentimentAnalysisSettings: describeBotAliasResults.sentimentAnalysisSettings,
     });
 
     const updateResults = await this.client.send(updateAliasCommand);

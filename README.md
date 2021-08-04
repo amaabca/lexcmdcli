@@ -15,7 +15,7 @@ CLI Tool for interacting with AWS Lex API
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g lexcmdcli
+$ npm install -g @amaabca/lexcmdcli
 $ lexcmdcli COMMAND
 running command...
 $ lexcmdcli (-v|--version|version)
@@ -28,64 +28,33 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`lexcmdcli list`](#lexcmdcli-list)
-* [`lexcmdcli build`](#lexcmdcli-build)
+* [`lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>`](#lexcmdcli-lexcmdcli-build--b-bot_id--a-alias_name)
 * [`lexcmdcli help [COMMAND]`](#lexcmdcli-help-command)
+* [`lexcmdcli list`](#lexcmdcli-list)
 
-## `lexcmdcli list`
-
-Command for list all V2 Lex Bots
-
-```
-USAGE
-  $ lexcmdcli list
-
-OPTIONS
-  -h, --help        show CLI help
-  -v, --verbose     includes more console messages
-
-EXAMPLE
-  $ lexcmdcli list
-  12345: SAMPLE_BOT1
-          (STATUS: Available, CURRENT VERSION: DRAFT)
-
-  123456: SAMPLE_BOT2
-            (STATUS: Available, CURRENT VERSION: 10)
-
-  1234567: SAMPLE_BOT3
-            (STATUS: Available, CURRENT VERSION: 4)
-
-  12345678: SAMPLE_BOT4
-            (STATUS: Available, CURRENT VERSION: DRAFT)
-```
-
-_See code: [src/commands/list.ts](https://github.com/amaabca/lexcmdcli/blob/v0.0.0/src/commands/list.ts)_
-
-## `lexcmdcli build`
+## `lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>`
 
 Command for deploying a V2 Lex Bot
 
 ```
 USAGE
-  $ lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME> -l <LOCALE_ID> -v
+  $ AWS_PROFILE=<profile> lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>
 
 OPTIONS
-  -h, --help            show CLI help
-  -v, --verbose         includes more console messages
-  -a, --alias=alias     alias name to create/update
-  -b, --botId=botId     id of bot to be built
-  -l, --locale=locale   locale id for bot
+  -a, --alias=alias
+  -b, --botId=botId
+  -h, --help           show CLI help
+  -l, --locale=locale
+  -v, --verbose
 
 EXAMPLE
-  $ lexcmdcli build -b 12345 -a prod -l en_US
-  building bot locale.......done
-  building bot version...done
-  updating bot alias
-  done
+
+       $ lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>
+       $ lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME> -l <LOCALE_ID>
+       $ lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME> -l <LOCALE_ID> -v
 ```
 
 _See code: [src/commands/build.ts](https://github.com/amaabca/lexcmdcli/blob/v0.0.0/src/commands/build.ts)_
-
 
 ## `lexcmdcli help [COMMAND]`
 
@@ -103,4 +72,24 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `lexcmdcli list`
+
+Command for list all V2 Lex Bots
+
+```
+USAGE
+  $ AWS_PROFILE=<profile> lexcmdcli list
+
+OPTIONS
+  -h, --help     show CLI help
+  -v, --verbose
+
+EXAMPLE
+
+       $ lexcmdcli list
+       $ lexcmdcli list -v
+```
+
+_See code: [src/commands/list.ts](https://github.com/amaabca/lexcmdcli/blob/v0.0.0/src/commands/list.ts)_
 <!-- commandsstop -->
