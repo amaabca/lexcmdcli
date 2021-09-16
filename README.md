@@ -28,11 +28,11 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`lexcmdcli lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>`](#lexcmdcli-lexcmdcli-build--b-bot_id--a-alias_name)
+* [`lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>`](#lexcmdcli-lexcmdcli-build--b-bot_id--a-alias_name)
 * [`lexcmdcli help [COMMAND]`](#lexcmdcli-help-command)
 * [`lexcmdcli list`](#lexcmdcli-list)
 
-## `lexcmdcli lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>`
+## `lexcmdcli build -b <BOT_ID> -a <ALIAS_NAME>`
 
 Command for deploying a V2 Lex Bot
 

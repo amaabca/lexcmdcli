@@ -1,6 +1,6 @@
 .PHONY: build list
 
-export APP_ENVIRONMENT ?= production
+export APP_ENVIRONMENT ?= staging
 export ALIAS ?= prod
 export AWS_PROFILE ?= redteam-$(APP_ENVIRONMENT)-sso
 
