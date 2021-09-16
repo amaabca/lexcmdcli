@@ -1,7 +1,7 @@
 {
   "name": "@amaabca/lexcmdcli",
   "description": "CLI Tool for interacting with AWS Lex API",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Alberta Motor Association",
   "bin": {
     "lexcmdcli": "./bin/run"

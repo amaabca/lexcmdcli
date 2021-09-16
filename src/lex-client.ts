@@ -200,6 +200,8 @@ export default class LexClient {
       botVersion: createVersionResults.botVersion,
       botAliasLocaleSettings: describeBotAliasResults.botAliasLocaleSettings,
       sentimentAnalysisSettings: describeBotAliasResults.sentimentAnalysisSettings,
+      conversationLogSettings: describeBotAliasResults.conversationLogSettings,
+      description: describeBotAliasResults.description,
     });
 
     const updateResults = await this.client.send(updateAliasCommand);
