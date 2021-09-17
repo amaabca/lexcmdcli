@@ -4,9 +4,9 @@ lexcmdcli
 CLI Tool for interacting with AWS Lex API
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/lexcmdcli.svg)](https://npmjs.org/package/lexcmdcli)
-[![Downloads/week](https://img.shields.io/npm/dw/lexcmdcli.svg)](https://npmjs.org/package/lexcmdcli)
-[![License](https://img.shields.io/npm/l/lexcmdcli.svg)](https://github.com/amaabca/lexcmdcli/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@amaabca/lexcmdcli.svg)](https://www.npmjs.com/package/@amaabca/lexcmdcli)
+[![Downloads/week](https://img.shields.io/npm/dw/@amaabca/lexcmdcli.svg)](https://www.npmjs.com/package/@amaabca/lexcmdcli)
+[![License](https://img.shields.io/npm/l/@amaabca/lexcmdcli.svg)](https://github.com/amaabca/lexcmdcli/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
